@@ -9,7 +9,7 @@ all:
         ansible_user: admin
         ansible_password: admin
         ansible_become: false
-        ansible_network_cli_ssh_type: libssh
+        ansible_network_cli_ssh_type: paramiko
         ansible_libssh_key_exchange_algorithms: +diffie-hellman-group14-sha1,+diffie-hellman-group-exchange-sha1
         ansible_libssh_hostkeys: +ssh-rsa
         ansible_libssh_publickey_algorithms: +ssh-rsa
