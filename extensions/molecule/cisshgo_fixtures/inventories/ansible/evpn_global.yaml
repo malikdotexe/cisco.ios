@@ -35,6 +35,6 @@ all:
         ansible_password: admin
         ansible_become: true
         ansible_become_password: admin
-        ansible_network_cli_ssh_type: paramiko
+        ansible_network_cli_ssh_type: libssh
         ansible_ssh_host_key_checking: false
         ansible_libssh_host_key_checking: false

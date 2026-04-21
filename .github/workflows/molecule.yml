@@ -11,10 +11,7 @@ concurrency:
 
 on:  # yamllint disable-line rule:truthy
   push:
-    branches:
-      - main
-      # Feature branch: run workflow before molecule.yml exists on main (fork testing)
-      - molecule-cisshgo-ci-32-modules
+    branches: [main]
   pull_request_target:
     branches: [main]
   workflow_dispatch:
@@ -105,6 +102,7 @@ jobs:
             "ansible-lint" \
             "yamllint" \
             "paramiko" \
+            "ansible-pylibssh>=1.1.0" \
             "netaddr" \
             "jmespath"
           ansible-galaxy collection install \

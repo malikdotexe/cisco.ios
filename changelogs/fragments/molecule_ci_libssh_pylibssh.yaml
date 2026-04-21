@@ -1,0 +1,3 @@
+---
+trivial:
+  - Molecule CI installs ansible-pylibssh and keeps ansible_network_cli_ssh_type libssh for network_cli to cisshgo.

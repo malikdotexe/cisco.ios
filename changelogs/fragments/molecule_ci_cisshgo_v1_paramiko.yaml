@@ -1,3 +1,0 @@
----
-trivial:
-  - Molecule CI pins cisshgo v1.0.0 (inventory and transcript-map CLI) and uses paramiko for network_cli in fixture inventories so GitHub runners do not require ansible-pylibssh.
