@@ -1,0 +1,3 @@
+---
+trivial:
+  - Molecule GitHub workflow installs the checked-out cisco.ios collection so converge playbooks resolve cisco.ios FQCNs.

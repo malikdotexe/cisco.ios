@@ -112,6 +112,9 @@ jobs:
             git+https://github.com/ansible-collections/ansible.netcommon.git \
             --force
 
+      - name: Install cisco.ios collection from checkout (required for converge)
+        run: ansible-galaxy collection install "${GITHUB_WORKSPACE}/cisco/ios" --force
+
       - name: Show versions
         run: |
           ansible --version
