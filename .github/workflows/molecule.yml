@@ -11,7 +11,10 @@ concurrency:
 
 on:  # yamllint disable-line rule:truthy
   push:
-    branches: [main]
+    branches:
+      - main
+      # Fork / feature branch: run Molecule when main does not yet ship this workflow
+      - molecule-cisshgo-ci-32-modules
   pull_request_target:
     branches: [main]
   workflow_dispatch:
