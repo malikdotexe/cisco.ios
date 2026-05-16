@@ -1,0 +1,75 @@
+platforms:
+  ios_hostname:
+    vendor: cisco
+    hostname: cisshgo-ios
+    username: admin
+    password: admin
+    command_transcripts:
+      show privilege: transcripts/common/show_privilege.txt
+      terminal length 0: transcripts/generic_empty_return.txt
+      terminal width 512: transcripts/generic_empty_return.txt
+      terminal width 0: transcripts/generic_empty_return.txt
+      show version: transcripts/common/show_version.txt
+      show running-config: transcripts/ios_hostname/show_running-config.txt
+      show running-config | section ^hostname: transcripts/ios_hostname/show_running-config_section_hostname_gathered.txt
+      write memory: transcripts/generic_empty_return.txt
+      write mem: transcripts/generic_empty_return.txt
+    context_search:
+      configure terminal: (config)#
+      enable: '#'
+      base: '#'
+    context_hierarchy:
+      (config)#: '#'
+      '#': '>'
+    end_context: '#'
+  ios_interfaces:
+    vendor: cisco
+    hostname: cisshgo-ios
+    username: admin
+    password: admin
+    command_transcripts:
+      show privilege: transcripts/common/show_privilege.txt
+      terminal length 0: transcripts/generic_empty_return.txt
+      terminal width 512: transcripts/generic_empty_return.txt
+      terminal width 0: transcripts/generic_empty_return.txt
+      show version: transcripts/common/show_version.txt
+      show running-config: transcripts/ios_interfaces/show_running-config.txt
+      show running-config | section ^interface: transcripts/ios_interfaces/show_running-config_section_interface_gathered.txt
+      write memory: transcripts/generic_empty_return.txt
+      write mem: transcripts/generic_empty_return.txt
+    context_search:
+      configure terminal: (config)#
+      interface: (config-if)#
+      enable: '#'
+      base: '#'
+    context_hierarchy:
+      (config-if)#: (config)#
+      (config)#: '#'
+      '#': '>'
+    end_context: '#'
+  ios_l2_interfaces:
+    vendor: cisco
+    hostname: cisshgo-ios
+    username: admin
+    password: admin
+    command_transcripts:
+      show privilege: transcripts/common/show_privilege.txt
+      terminal length 0: transcripts/generic_empty_return.txt
+      terminal width 512: transcripts/generic_empty_return.txt
+      terminal width 0: transcripts/generic_empty_return.txt
+      show version: transcripts/common/show_version.txt
+      show running-config: transcripts/ios_l2_interfaces/show_running-config.txt
+      show running-config | section ^interface: transcripts/ios_l2_interfaces/show_running-config_section_l2_gathered.txt
+      write memory: transcripts/generic_empty_return.txt
+      write mem: transcripts/generic_empty_return.txt
+    context_search:
+      configure terminal: (config)#
+      interface: (config-if)#
+      enable: '#'
+      base: '#'
+    context_hierarchy:
+      (config-if)#: (config)#
+      (config)#: '#'
+      '#': '>'
+    end_context: '#'
+scenarios: {}
