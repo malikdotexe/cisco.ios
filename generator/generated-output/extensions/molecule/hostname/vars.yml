@@ -1,0 +1,7 @@
+---
+# Inputs for the shared _shared/{create,destroy,verify}.yml playbooks.
+scenario_name: hostname
+listener_ports:
+  - 10000   # gathered / parsed / rendered
+  - 10001   # merged
+  - 10002   # deleted

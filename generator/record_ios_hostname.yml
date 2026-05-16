@@ -1,0 +1,74 @@
+---
+- name: Record ios_hostname integration test (gathered, merged, deleted)
+  hosts: ios
+  gather_facts: false
+  vars_files:
+    - "{{ playbook_dir }}/../ansible_collections/cisco/ios/tests/integration/targets/ios_hostname/vars/main.yaml"
+
+  tasks:
+    # --- SETUP: ensure clean state ---
+    - name: Remove any existing hostname config
+      cisco.ios.ios_hostname:
+        config:
+        state: deleted
+      ignore_errors: true
+
+    - name: Populate baseline hostname (box1)
+      cisco.ios.ios_hostname:
+        config:
+          hostname: "box1"
+        state: merged
+
+    # --- GATHERED ---
+    - name: Gathered state
+      cisco.ios.ios_hostname:
+        state: gathered
+      register: result
+
+    # --- MERGED ---
+    - name: Merged state (hostname boxTest)
+      cisco.ios.ios_hostname:
+        config:
+          hostname: "boxTest"
+        state: merged
+      register: result
+
+    - name: Merged idempotent check
+      cisco.ios.ios_hostname:
+        config:
+          hostname: "boxTest"
+        state: merged
+      register: result
+
+    # --- SETUP for DELETED: re-populate with box1 ---
+    - name: Remove config before deleted test
+      cisco.ios.ios_hostname:
+        config:
+        state: deleted
+      ignore_errors: true
+
+    - name: Populate hostname (box1) for deleted test
+      cisco.ios.ios_hostname:
+        config:
+          hostname: "box1"
+        state: merged
+
+    # --- DELETED ---
+    - name: Deleted state
+      cisco.ios.ios_hostname:
+        config:
+        state: deleted
+      register: result
+
+    - name: Deleted idempotent check
+      cisco.ios.ios_hostname:
+        config:
+        state: deleted
+      register: result
+
+    # --- CLEANUP ---
+    - name: Final cleanup
+      cisco.ios.ios_hostname:
+        config:
+        state: deleted
+      ignore_errors: true
