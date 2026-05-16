@@ -1,0 +1,13 @@
+---
+# CISSHGO server inventory for the hostname scenario.
+# Port layout:
+#   10000 - ios_hostname platform (gathered / parsed / rendered)
+#   10001 - ios-hostname-merged
+#   10002 - ios-hostname-deleted
+devices:
+  - platform: ios_hostname
+    count: 1
+  - scenario: ios-hostname-merged
+    count: 1
+  - scenario: ios-hostname-deleted
+    count: 1
