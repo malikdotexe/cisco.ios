@@ -1,0 +1,29 @@
+---
+# Ansible inventory for the hostname molecule scenario.
+# Network vars scoped to ios_cisshgo group to prevent localhost leakage.
+all:
+  children:
+    ios_cisshgo:
+      vars:
+        ansible_connection: ansible.netcommon.network_cli
+        ansible_network_os: cisco.ios.ios
+        ansible_user: admin
+        ansible_password: admin
+        ansible_host: 127.0.0.1
+        ansible_become: true
+        ansible_become_method: enable
+        ansible_become_password: admin
+        ansible_ssh_common_args: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+      children:
+        ios_hostname_gathered:
+          hosts:
+            cisshgo-hostname-gathered:
+              ansible_port: 10000
+        ios_hostname_merged:
+          hosts:
+            cisshgo-hostname-merged:
+              ansible_port: 10001
+        ios_hostname_deleted:
+          hosts:
+            cisshgo-hostname-deleted:
+              ansible_port: 10002
