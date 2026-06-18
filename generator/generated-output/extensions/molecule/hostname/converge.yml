@@ -1,0 +1,91 @@
+---
+# ====================================================================
+# 1. GATHERED — stateless platform on port 10000
+# ====================================================================
+- name: "ios_hostname — gathered"
+  hosts: ios_hostname_gathered
+  gather_facts: false
+  vars_files:
+    - "{{ playbook_dir }}/../../../tests/integration/targets/ios_hostname/vars/main.yaml"
+  tasks:
+    - name: Gather ios_hostname facts
+      register: result
+      cisco.ios.ios_hostname:
+        state: gathered
+
+    - name: Assert gathered config matches expected
+      ansible.builtin.assert:
+        that:
+          - gathered['config'] == result['gathered']
+          - result['changed'] == false
+        fail_msg: "Gathered config does not match expected"
+        success_msg: "Gathered config matches expected"
+
+# ====================================================================
+# 2. MERGED — stateful scenario on port 10001
+# ====================================================================
+- name: "ios_hostname — merged"
+  hosts: ios_hostname_merged
+  gather_facts: false
+  vars_files:
+    - "{{ playbook_dir }}/../../../tests/integration/targets/ios_hostname/vars/main.yaml"
+  tasks:
+    - name: Ios Hostname merged
+      register: result
+      cisco.ios.ios_hostname: &merged_config
+        config:
+          hostname: boxTest
+        state: merged
+
+    - name: Assert that correct set of commands were generated
+      ansible.builtin.assert:
+        that:
+          - "merged['commands'] == result['commands']"
+
+    - name: Assert that after dict is correctly generated
+      ansible.builtin.assert:
+        that:
+          - merged['after'] == result['after']
+
+    - name: Ios Hostname merged (idempotent)
+      register: result
+      cisco.ios.ios_hostname: *merged_config
+
+    - name: Assert that the previous task was idempotent
+      ansible.builtin.assert:
+        that:
+          - result['changed'] == false
+
+# ====================================================================
+# 3. DELETED — stateful scenario on port 10002
+# ====================================================================
+- name: "ios_hostname — deleted"
+  hosts: ios_hostname_deleted
+  gather_facts: false
+  vars_files:
+    - "{{ playbook_dir }}/../../../tests/integration/targets/ios_hostname/vars/main.yaml"
+  tasks:
+    - name: Ios Hostname deleted
+      register: result
+      cisco.ios.ios_hostname: &deleted_config
+        state: deleted
+
+    - name: Assert that correct set of commands were generated
+      ansible.builtin.assert:
+        that:
+          - "deleted['commands'] == result['commands']"
+
+    - name: Assert that before dicts are correctly generated
+      ansible.builtin.assert:
+        that:
+          - deleted['before'] == result['before']
+
+    - name: Ios Hostname deleted (idempotent)
+      register: result
+      cisco.ios.ios_hostname: *deleted_config
+
+    - name: Assert that the previous task was idempotent
+      ansible.builtin.assert:
+        that:
+          - result['changed'] == false
+...

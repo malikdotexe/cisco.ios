@@ -1,0 +1,60 @@
+# Add this platform under 'platforms:' in transcript_map.yaml:
+
+  ios_hostname:
+    vendor: "cisco"
+    hostname: "cisshgo-ios"
+    username: "admin"
+    password: "admin"
+    command_transcripts:
+      "show privilege": "transcripts/common/show_privilege.txt"
+      "terminal length 0": "transcripts/generic_empty_return.txt"
+      "terminal width 512": "transcripts/generic_empty_return.txt"
+      "terminal width 0": "transcripts/generic_empty_return.txt"
+      "show version": "transcripts/common/show_version.txt"
+      "show running-config | section ^hostname": "transcripts/ios_hostname/gathered.txt"
+      "write memory": "transcripts/generic_empty_return.txt"
+      "write mem": "transcripts/generic_empty_return.txt"
+    context_search:
+      "configure terminal": "(config)#"
+      "interface": "(config-if)#"
+      "enable": "#"
+      "base": "#"
+    context_hierarchy:
+      "(config-if)#": "(config)#"
+      "(config)#": "#"
+      "#": ">"
+    end_context: "#"
+
+# Add these scenarios under 'scenarios:' in transcript_map.yaml:
+
+  ios-hostname-merged:
+    platform: ios_hostname
+    sequence:
+      - command: "show running-config | section ^hostname"
+        transcript: "transcripts/ios_hostname/scenarios/merged/before.txt"
+      - command: "configure terminal"
+        transcript: "transcripts/generic_empty_return.txt"
+      - command: "hostname boxTest"
+        transcript: "transcripts/generic_empty_return.txt"
+      - command: "end"
+        transcript: "transcripts/generic_empty_return.txt"
+      - command: "show running-config | section ^hostname"
+        transcript: "transcripts/ios_hostname/scenarios/merged/after.txt"
+      - command: "show running-config | section ^hostname"
+        transcript: "transcripts/ios_hostname/scenarios/merged/after.txt"
+
+  ios-hostname-deleted:
+    platform: ios_hostname
+    sequence:
+      - command: "show running-config | section ^hostname"
+        transcript: "transcripts/ios_hostname/scenarios/deleted/before.txt"
+      - command: "configure terminal"
+        transcript: "transcripts/generic_empty_return.txt"
+      - command: "no hostname box1"
+        transcript: "transcripts/generic_empty_return.txt"
+      - command: "end"
+        transcript: "transcripts/generic_empty_return.txt"
+      - command: "show running-config | section ^hostname"
+        transcript: "transcripts/ios_hostname/scenarios/deleted/after.txt"
+      - command: "show running-config | section ^hostname"
+        transcript: "transcripts/ios_hostname/scenarios/deleted/after.txt"

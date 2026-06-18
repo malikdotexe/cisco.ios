@@ -1,0 +1,96 @@
+{"command": "show privilege", "response": "Current privilege level is 15", "timestamp": 1778931361.00819}
+{"command": "terminal length 0", "response": "", "timestamp": 1778931361.4186502}
+{"command": "terminal width 512", "response": "", "timestamp": 1778931361.8265688}
+{"command": "terminal width 0", "response": "", "timestamp": 1778931363.262797}
+{"command": "show version", "response": "Cisco IOS XE Software, Version 17.13.01a\nCisco IOS Software [IOSXE], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.13.1a, RELEASE SOFTWARE (fc3)\nTechnical Support: http://www.cisco.com/techsupport\nCopyright (c) 1986-2023 by Cisco Systems, Inc.\nCompiled Wed 13-Dec-23 21:43 by mcpre\n\n\nCisco IOS-XE software, Copyright (c) 2005-2023 by cisco Systems, Inc.\nAll rights reserved.  Certain components of Cisco IOS-XE software are\nlicensed under the GNU General Public License (\"GPL\") Version 2.0.  The\nsoftware code licensed under GPL Version 2.0 is free software that comes\nwith ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such\nGPL code under the terms of GPL Version 2.0.  For more details, see the\ndocumentation or \"License Notice\" file accompanying the IOS-XE software,\nor the applicable URL provided on the flyer accompanying the IOS-XE\nsoftware.\n\n\nROM: IOS-XE ROMMON\nRouter uptime is 1 week, 5 days, 2 hours, 22 minutes\nUptime for this control processor is 1 week, 5 days, 2 hours, 23 minutes\nSystem returned to ROM by reload\nSystem image file is \"bootflash:packages.conf\"\nLast reload reason: reload\n\n\n\nThis product contains cryptographic features and is subject to United\nStates and local country laws governing import, export, transfer and\nuse. Delivery of Cisco cryptographic products does not imply\nthird-party authority to import, export, distribute or use encryption.\nImporters, exporters, distributors and users are responsible for\ncompliance with U.S. and local country laws. By using this product you\nagree to comply with applicable laws and regulations. If you are unable\nto comply with U.S. and local laws, return this product immediately.\n\nA summary of U.S. laws governing Cisco cryptographic products may be found at:\nhttp://www.cisco.com/wwl/export/crypto/tool/stqrg.html\n\nIf you require further assistance please contact us by sending email to\nexport@cisco.com.\n\nLicense Level: \nLicense Type: Perpetual\nNext reload license Level: \n\nAddon License Level: \nAddon License Type: Subscription\nNext reload addon license Level: \n\nThe current throughput level is 20000 kbps \n\n\nSmart Licensing Status: Smart Licensing Using Policy\n\ncisco C8000V (VXE) processor (revision VXE) with 2017252K/3075K bytes of memory.\nProcessor board ID 9CQ1B0TRAFA\nRouter operating mode: Autonomous\n4 Gigabit Ethernet interfaces\n32768K bytes of non-volatile configuration memory.\n3960676K bytes of physical memory.\n5234688K bytes of virtual hard disk at bootflash:.\n\nConfiguration register is 0x2102", "timestamp": 1778931364.956995}
+{"command": "show vlan", "response": "VLAN Name                             Status    Ports\n---- -------------------------------- --------- -------------------------------\n1    default                          active    \n1002 fddi-default                     act/unsup \n1003 token-ring-default               act/unsup \n1004 fddinet-default                  act/unsup \n1005 trnet-default                    act/unsup \n\nVLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2\n---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------\n1    enet  100001     1500  -      -      -        -    -        0      0   \n1002 fddi  101002     1500  -      -      -        -    -        0      0   \n1003 tr    101003     1500  -      -      -        -    -        0      0   \n1004 fdnet 101004     1500  -      -      -        ieee -        0      0   \n1005 trnet 101005     1500  -      -      -        ibm  -        0      0   \n\nPrimary Secondary Type              Ports\n------- --------- ----------------- ------------------------------------------", "timestamp": 1778931365.3670888}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931366.281811}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931367.8371258}
+{"command": "no hostname Router", "response": "", "timestamp": 1778931368.258729}
+{"command": "end", "response": "", "timestamp": 1778931368.6370518}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931369.774658}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931372.033539}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931372.4476118}
+{"command": "hostname box1", "response": "", "timestamp": 1778931372.866889}
+{"command": "end", "response": "", "timestamp": 1778931373.256245}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931374.5118651}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931376.40525}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931378.150818}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931378.561057}
+{"command": "hostname boxTest", "response": "", "timestamp": 1778931379.355401}
+{"command": "end", "response": "", "timestamp": 1778931379.747327}
+{"command": "show running-config | section ^hostname", "response": "hostname boxTest", "timestamp": 1778931380.666527}
+{"command": "show running-config | section ^hostname", "response": "hostname boxTest", "timestamp": 1778931382.534629}
+{"command": "show running-config | section ^hostname", "response": "hostname boxTest", "timestamp": 1778931384.399275}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931384.988655}
+{"command": "no hostname boxTest", "response": "", "timestamp": 1778931385.804033}
+{"command": "end", "response": "", "timestamp": 1778931386.289567}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931387.309485}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931389.013359}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931389.440727}
+{"command": "hostname box1", "response": "", "timestamp": 1778931389.87127}
+{"command": "end", "response": "", "timestamp": 1778931390.2557702}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931391.1675}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931393.550821}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931393.973054}
+{"command": "no hostname box1", "response": "", "timestamp": 1778931394.422078}
+{"command": "end", "response": "", "timestamp": 1778931394.8721359}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931396.6169379}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931398.378467}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931398.781879}
+{"command": "no hostname Router", "response": "", "timestamp": 1778931399.197572}
+{"command": "end", "response": "", "timestamp": 1778931399.584654}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931400.5062249}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931402.333749}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931402.781805}
+{"command": "no hostname Router", "response": "", "timestamp": 1778931403.306992}
+{"command": "end", "response": "", "timestamp": 1778931403.687388}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931405.006439}
+{"command": "show privilege", "response": "Current privilege level is 15", "timestamp": 1778931361.00819}
+{"command": "terminal length 0", "response": "", "timestamp": 1778931361.4186502}
+{"command": "terminal width 512", "response": "", "timestamp": 1778931361.8265688}
+{"command": "terminal width 0", "response": "", "timestamp": 1778931363.262797}
+{"command": "show version", "response": "Cisco IOS XE Software, Version 17.13.01a\nCisco IOS Software [IOSXE], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.13.1a, RELEASE SOFTWARE (fc3)\nTechnical Support: http://www.cisco.com/techsupport\nCopyright (c) 1986-2023 by Cisco Systems, Inc.\nCompiled Wed 13-Dec-23 21:43 by mcpre\n\n\nCisco IOS-XE software, Copyright (c) 2005-2023 by cisco Systems, Inc.\nAll rights reserved.  Certain components of Cisco IOS-XE software are\nlicensed under the GNU General Public License (\"GPL\") Version 2.0.  The\nsoftware code licensed under GPL Version 2.0 is free software that comes\nwith ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such\nGPL code under the terms of GPL Version 2.0.  For more details, see the\ndocumentation or \"License Notice\" file accompanying the IOS-XE software,\nor the applicable URL provided on the flyer accompanying the IOS-XE\nsoftware.\n\n\nROM: IOS-XE ROMMON\nRouter uptime is 1 week, 5 days, 2 hours, 22 minutes\nUptime for this control processor is 1 week, 5 days, 2 hours, 23 minutes\nSystem returned to ROM by reload\nSystem image file is \"bootflash:packages.conf\"\nLast reload reason: reload\n\n\n\nThis product contains cryptographic features and is subject to United\nStates and local country laws governing import, export, transfer and\nuse. Delivery of Cisco cryptographic products does not imply\nthird-party authority to import, export, distribute or use encryption.\nImporters, exporters, distributors and users are responsible for\ncompliance with U.S. and local country laws. By using this product you\nagree to comply with applicable laws and regulations. If you are unable\nto comply with U.S. and local laws, return this product immediately.\n\nA summary of U.S. laws governing Cisco cryptographic products may be found at:\nhttp://www.cisco.com/wwl/export/crypto/tool/stqrg.html\n\nIf you require further assistance please contact us by sending email to\nexport@cisco.com.\n\nLicense Level: \nLicense Type: Perpetual\nNext reload license Level: \n\nAddon License Level: \nAddon License Type: Subscription\nNext reload addon license Level: \n\nThe current throughput level is 20000 kbps \n\n\nSmart Licensing Status: Smart Licensing Using Policy\n\ncisco C8000V (VXE) processor (revision VXE) with 2017252K/3075K bytes of memory.\nProcessor board ID 9CQ1B0TRAFA\nRouter operating mode: Autonomous\n4 Gigabit Ethernet interfaces\n32768K bytes of non-volatile configuration memory.\n3960676K bytes of physical memory.\n5234688K bytes of virtual hard disk at bootflash:.\n\nConfiguration register is 0x2102", "timestamp": 1778931364.956995}
+{"command": "show vlan", "response": "VLAN Name                             Status    Ports\n---- -------------------------------- --------- -------------------------------\n1    default                          active    \n1002 fddi-default                     act/unsup \n1003 token-ring-default               act/unsup \n1004 fddinet-default                  act/unsup \n1005 trnet-default                    act/unsup \n\nVLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2\n---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------\n1    enet  100001     1500  -      -      -        -    -        0      0   \n1002 fddi  101002     1500  -      -      -        -    -        0      0   \n1003 tr    101003     1500  -      -      -        -    -        0      0   \n1004 fdnet 101004     1500  -      -      -        ieee -        0      0   \n1005 trnet 101005     1500  -      -      -        ibm  -        0      0   \n\nPrimary Secondary Type              Ports\n------- --------- ----------------- ------------------------------------------", "timestamp": 1778931365.3670888}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931366.281811}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931367.8371258}
+{"command": "no hostname Router", "response": "", "timestamp": 1778931368.258729}
+{"command": "end", "response": "", "timestamp": 1778931368.6370518}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931369.774658}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931372.033539}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931372.4476118}
+{"command": "hostname box1", "response": "", "timestamp": 1778931372.866889}
+{"command": "end", "response": "", "timestamp": 1778931373.256245}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931374.5118651}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931376.40525}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931378.150818}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931378.561057}
+{"command": "hostname boxTest", "response": "", "timestamp": 1778931379.355401}
+{"command": "end", "response": "", "timestamp": 1778931379.747327}
+{"command": "show running-config | section ^hostname", "response": "hostname boxTest", "timestamp": 1778931380.666527}
+{"command": "show running-config | section ^hostname", "response": "hostname boxTest", "timestamp": 1778931382.534629}
+{"command": "show running-config | section ^hostname", "response": "hostname boxTest", "timestamp": 1778931384.399275}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931384.988655}
+{"command": "no hostname boxTest", "response": "", "timestamp": 1778931385.804033}
+{"command": "end", "response": "", "timestamp": 1778931386.289567}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931387.309485}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931389.013359}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931389.440727}
+{"command": "hostname box1", "response": "", "timestamp": 1778931389.87127}
+{"command": "end", "response": "", "timestamp": 1778931390.2557702}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931391.1675}
+{"command": "show running-config | section ^hostname", "response": "hostname box1", "timestamp": 1778931393.550821}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931393.973054}
+{"command": "no hostname box1", "response": "", "timestamp": 1778931394.422078}
+{"command": "end", "response": "", "timestamp": 1778931394.8721359}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931396.6169379}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931398.378467}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931398.781879}
+{"command": "no hostname Router", "response": "", "timestamp": 1778931399.197572}
+{"command": "end", "response": "", "timestamp": 1778931399.584654}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931400.5062249}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931402.333749}
+{"command": "configure terminal", "response": "Enter configuration commands, one per line.  End with CNTL/Z.", "timestamp": 1778931402.781805}
+{"command": "no hostname Router", "response": "", "timestamp": 1778931403.306992}
+{"command": "end", "response": "", "timestamp": 1778931403.687388}
+{"command": "show running-config | section ^hostname", "response": "hostname Router", "timestamp": 1778931405.006439}
